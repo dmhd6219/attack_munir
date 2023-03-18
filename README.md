@@ -10,8 +10,8 @@ In the <sub>input.txt</sub> file you will have the following content separated b
   * The visibility of the player *v_i* (*True*/*False*).
 4. Sequence of actions for players **S** (**0** ≤ **S** ≤ **1000**) followed on the same line by 1 or 2 player names separated by single spaces. Not each player is guaranteed to have actions. Next actions are applicable:
  * *attack name_i name_j*
-  * if *p_i* > *p_j*, then *player_i* will gain *p_i−p_j* power and *player_j* will have no power left and further will be called **frozen**.
-  * if *p_i* < *p_j*, then *player_i* will be frozen and *player_j* will gain *p_j−p_i* **power**.
-  * if *p_i* = *p_j*, then both players will be **frozen**.
-  * if *player_j* is not **visible**, then the *player_i* will be **frozen**.
+  - if *p_i* > *p_j*, then *player_i* will gain *p_i−p_j* power and *player_j* will have no power left and further will be called **frozen**.
+  - if *p_i* < *p_j*, then *player_i* will be frozen and *player_j* will gain *p_j−p_i* **power**.
+  - if *p_i* = *p_j*, then both players will be **frozen**.
+  - if *player_j* is not **visible**, then the *player_i* will be **frozen**.
  * *flip_visibility name_i* will flip the status of the **visibility** of the *player_i*.
