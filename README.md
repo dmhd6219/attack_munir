@@ -2,7 +2,7 @@ Harry Polis, Hermione Grannopark, Ron Weasinno and others from Hogwartolis appli
 
 In the <sub>input.txt</sub> file you will have the following content separated by a new line:
 <ol>
-<li>The number **N** (**1** ≤ **N** ≤ **10**), which is the number of teams in the game.</li>
+<li>The number <b>N</b> (**1** ≤ **N** ≤ **10**), which is the number of teams in the game.</li>
 <li>**N**  lines, each line should contain a unique magician name with length **L** (**2** ≤ **L** ≤ **20**) made of only English letters and should begin with capital letter. Each of those magician names should correspond to the team number from **0** till **N−1**, which was chosen by this team to become the head of the club.</li>
 <li>The number of the players **M** (**N** ≤ **M** ≤ **100**). After this you will have **M∗4** lines, each line will represent a player *i* information:
  <ul><li>The unique name of the player namei with length **L** (**2** ≤ **L** ≤ **20**) should contain only English letters and begin with capital letter.</li>
