@@ -20,6 +20,7 @@ In the <sub>input.txt</sub> file you will have the following content separated b
    <li>if <i>p_i</i> = <i>p_j</i>, then both players will be <b>frozen</b>.</li>
    </ul></li>
   <li><i>flip_visibility name_i</i> will flip the status of the <b>visibility</b> of the <i>player_i</i>.</li>
+  <li><i>heal name_i name_j</i> will make <i>player_i</i> give half (ceil the numbers up for both players if needed) of his power to <i>player_j</i> (from the same team).</li>
   <li><i>super name_i name_j</i> will create a super player instead of existing <i>2</i> players (from the same team) with joint power and actions. The power will be <i>p_i</i>+<i>p_j</i> (sum at most <b>1000</b>, a greater sum should be floored down to <b>1000</b>) and the visibility will be <i>True</i> and the name assigned to super player will be <i>S_k</i>, where <i>k</i> is the index of super player (<i>k</i> begins with <i>0</i> and increments for each next new created super player).</li>
   </ul>
  </li>
