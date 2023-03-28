@@ -8,15 +8,15 @@ In the <sub>input.txt</sub> file you will have the following content separated b
  <ul><li>The unique name of the player namei with length <b>L</b> (<b>2</b> ≤ <b>L</b> ≤ <b>20</b>) should contain only English letters and begin with capital letter.</li>
   <li>Team number for this player <i>t_i</i> (<b>0</b> ≤ <i>t_i</i> < <b>N</b>).</li>
   <li>The power of the player <i>p_i</i> (<b>0</b> ≤ <i>p_i</i> ≤ <b>1000</b>), which is integer value.</li>
-  <li>The visibility of the player <i>v_i</i> (*True*/*False*).</li>
+  <li>The visibility of the player <i>v_i</i> (<i>True</i>/<i>False</i>).</li>
  </ul>
  </li>
  <li>Sequence of actions for players <b>S</b> (<b>0</b> ≤ <b>S</b> ≤ <b>1000</b>) followed on the same line by 1 or 2 player names separated by single spaces. Not each player is guaranteed to have actions. Next actions are applicable:
  <ul>
-  <li>*attack name_i name_j*<ul>
+  <li><i>attack name_i name_j</i><ul>
    <li>if <i>p_i</i> > <i>p_j</i>, then <i>player_i</i> will gain <i>p_i</i> − <i>p_j</i> power and <i>player_j</i> will have no power left and further will be called <b>frozen</b>.</li>
    <li>if <i>p_i</i> < <i>p_i</i>, then <i>player_i</i> will be frozen and <i>player_j</i> will gain <i>p_j</i> − <i>p_i</i> <b>power</b>.</li>
-    <li> if *player_j* is not <b>visible</b>, then the *player_i* will be <b>frozen</b>.</li>
+    <li> if <i>player_j</i> is not <b>visible</b>, then the *player_i* will be <b>frozen</b>.</li>
    <li>if <i>p_i</i> = <i>p_j</i>, then both players will be <b>frozen</b>.</li>
    </ul></li>
   <li><i>flip_visibility name_i</i> will flip the status of the <b>visibility</b> of the <i>player_i</i>.</li>
