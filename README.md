@@ -14,8 +14,8 @@ In the <sub>input.txt</sub> file you will have the following content separated b
  <li>Sequence of actions for players <b>S</b> (<b>0</b> ≤ <b>S</b> ≤ <b>1000</b>) followed on the same line by 1 or 2 player names separated by single spaces. Not each player is guaranteed to have actions. Next actions are applicable:
  <ul>
   <li>*attack name_i name_j*<ul>
-   <li>if *p_i* > *p_j*, then *player_i* will gain *p_i−p_j* power and *player_j* will have no power left and further will be called <b>frozen</b>.</li>
-   <li>if *p_i* < *p_j*, then *player_i* will be frozen and *player_j* will gain *p_j−p_i* <b>power</b>.</li>
+   <li>if <i>p_i</i> > <i>p_j</i>, then <i>player_i</i> will gain <i>p_i</i> − <i>p_j</i> power and <i>player_j</i> will have no power left and further will be called <b>frozen</b>.</li>
+   <li>if <i>p_i</i> < <i>p_i</i>, then <i>player_i</i> will be frozen and <i>player_j</i> will gain <i>p_j</i> − <i>p_i</i> <b>power</b>.</li>
     <li> if *player_j* is not <b>visible</b>, then the *player_i* will be <b>frozen</b>.</li>
    <li>if <i>p_i</i> = <i>p_j</i>, then both players will be <b>frozen</b>.</li>
    </ul></li>
