@@ -4,7 +4,7 @@ In the <sub>input.txt</sub> file you will have the following content separated b
 <ol>
 <li>The number <b>N</b> (<b>1</b> ≤ <b>N</b> ≤ <b>10</b>), which is the number of teams in the game.</li>
 <li><b>N</b>  lines, each line should contain a unique magician name with length <b>L</b> (<b>2</b> ≤ <b>L</b> ≤ <b>20</b>) made of only English letters and should begin with capital letter. Each of those magician names should correspond to the team number from <b>0</b> till <b>N-1</b>, which was chosen by this team to become the head of the club.</li>
-<li>The number of the players <b>M</b> (<b>N</b> ≤ <b>M</b>≤ <b>100</b>). After this you will have <b>M*4</b> lines, each line will represent a player *i* information:
+<li>The number of the players <b>M</b> (<b>N</b> ≤ <b>M</b>≤ <b>100</b>). After this you will have <b>M*4</b> lines, each line will represent a player <i>i</i> information:
  <ul><li>The unique name of the player namei with length <b>L</b> (<b>2</b> ≤ <b>L</b> ≤ <b>20</b>) should contain only English letters and begin with capital letter.</li>
   <li>Team number for this player <i>t_i</i> (<b>0</b> ≤ <i>t_i</i> < <b>N</b>).</li>
   <li>The power of the player <i>p_i</i> (<b>0</b> ≤ <i>p_i</i> ≤ <b>1000</b>), which is integer value.</li>
