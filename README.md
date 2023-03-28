@@ -3,7 +3,7 @@ Harry Polis, Hermione Grannopark, Ron Weasinno and others from Hogwartolis appli
 In the <sub>input.txt</sub> file you will have the following content separated by a new line:
 <ol>
 <li>The number <b>N</b> (<b>1</b> ≤ <b>N</b> ≤ *<b>10</b>), which is the number of teams in the game.</li>
-<li><b>N</b>  lines, each line should contain a unique magician name with length **L** (<b>2</b> ≤ <b>L</b> ≤ <b>20</b>) made of only English letters and should begin with capital letter. Each of those magician names should correspond to the team number from <b>0</b> till <b>N-1</b>, which was chosen by this team to become the head of the club.</li>
+<li><b>N</b>  lines, each line should contain a unique magician name with length <b>L</b> (<b>2</b> ≤ <b>L</b> ≤ <b>20</b>) made of only English letters and should begin with capital letter. Each of those magician names should correspond to the team number from <b>0</b> till <b>N-1</b>, which was chosen by this team to become the head of the club.</li>
 <li>The number of the players <b>M</b> (<b>N</b> ≤ <b>M</b>≤ <b>100</b>). After this you will have <b>M*4</b> lines, each line will represent a player *i* information:
  <ul><li>The unique name of the player namei with length <b>L</b> (<b>2</b> ≤ <b>L</b> ≤ <b>20</b>) should contain only English letters and begin with capital letter.</li>
   <li>Team number for this player *t_i* (<b>0</b> ≤ *t_i* < <b>N</b>).</li>
@@ -16,8 +16,8 @@ In the <sub>input.txt</sub> file you will have the following content separated b
   <li>*attack name_i name_j*<ul>
    <li>if *p_i* > *p_j*, then *player_i* will gain *p_i−p_j* power and *player_j* will have no power left and further will be called <b>frozen</b>.</li>
    <li>if *p_i* < *p_j*, then *player_i* will be frozen and *player_j* will gain *p_j−p_i* <b>power</b>.</li>
-    <li> if *player_j* is not **visible**, then the *player_i* will be <b>frozen</b>.</li>
-   <li>if *p_i* = *p_j*, then both players will be **frozen**.</li>
+    <li> if *player_j* is not <b>visible</b>, then the *player_i* will be <b>frozen</b>.</li>
+   <li>if *p_i* = *p_j*, then both players will be <b>frozen</b>.</li>
    </ul></li>
   <li>*flip_visibility name_i* will flip the status of the <b>visibility</b> of the *player_i*.</li>
   </ul>
