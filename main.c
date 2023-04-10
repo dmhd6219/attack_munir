@@ -5,7 +5,6 @@
 #include <stdbool.h>
 #include <math.h>
 
-
 // maximum length of string
 #define MAX_LENGTH 100
 // maximum power of players
