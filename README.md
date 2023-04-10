@@ -25,3 +25,323 @@ In the <sub>input.txt</sub> file you will have the following content separated b
   </ul>
  </li>
 </ol>
+
+A frozen player can be <i>healed</i>, then this player will be <i>unfrozen</i>. A player with <i>visibility</i> equal to <i>False</i> can be <i>healed</i>. A frozen <i>player_j</i> can be in the action in <i>super name_i name_j</i>. A playerj with <i>visibility</i> equal to <i>False</i> can be in the action in <i>super name_i name_j</i>.
+
+You might have a team with zero players, but it is guaranteed that all players have assigned teams.
+
+The cases when you cannot perform the actions, but they should not stop the game and the actions should be ignored:
+<ol>
+ <li>If a player with the <i>visibility</i> equal to <i>False</i> tries to make any action other than <i>flip_visibility</i>, then the next warning message should be added to the output file: "<i>This player can't play</i>".</li>
+ <li>If a <i>frozen</i> player tries to make an action, then the next warning message should be added to the output file: "<i>This player is frozen</i>".</li>
+ <li>In case of <i>heal</i> or <i>super</i> action, if players are from different teams, then the next warning message should be added to the output file: "<i>Both players should be from the same team</i>".</li>
+ <li>The player shouldn't be able to <i>heal</i> itself, in this case in the output file the next warning message should be added: "<i>The player cannot heal itself</i>".</li>
+ <li>If during creation of a <i>super</i> player the <i>player_i</i> unites with <i>player_i</i>, then the next warning message should be added to the output file: "<i>The player cannot do super action with itself</i>".</li>
+</ol>
+<b>If multiple described errors happen for a single action, print ONLY the first one of them in the order given above.</b>
+
+The input file has to be read until the end and all actions have to be performed sequentially.
+
+At the end of the output file the next message should be added: "<i>The chosen wizard is #team's_wizard</i>" (the wizard of the team which has the greatest power left which is the sum of all the team members' powers). If more than 1 team has the greatest power the output file should contain a different message, which is: "<i>It's a tie</i>".
+
+The <i>input.txt</i> file may contain invalid inputs, which has to be detected and reported in the <i>output.txt</i> file with the only error message "<i>Invalid inputs</i>". If the output file already contains some other previous messages, everything has to be replaced by an error message.
+
+P.S.: It is guaranteed that magicians' and players' names are not intersecting in the same test, i.e. you should not expect the input with the player and magician having the same name.
+
+P.P.S.: You have to use structure(s) for this assignment
+
+<h3>Examples:</h3>
+
+<h5>input</h5>
+```
+5
+Harry
+Hermione
+Ron
+Draco
+Ginny
+5
+Munir
+0
+1000
+True
+Alaa
+1
+500
+True
+Mohamad
+2
+650
+True
+Alexandr
+3
+800
+True
+Mikhail
+4
+900
+True
+flip_visibility Alaa
+attack Mohamad Alexandr
+attack Munir Mikhail
+attack Munir Alexandr
+attack Munir Alaa
+```
+<h5>output</h5>
+```
+The chosen wizard is Hermione
+```
+<h5>input</h5>
+```
+4
+Harry
+Hermione
+Ron
+Draco
+8
+Gary
+0
+800
+True
+Ronald
+0
+650
+False
+Sybill
+1
+350
+True
+Padma
+1
+900
+True
+Hengist
+2
+190
+False
+Bridget
+2
+589
+True
+Darco
+3
+950
+True
+MARCUS
+3
+469
+True
+attack Gary MARCUS
+attack Darco Ronald
+attack Darco Bridget
+flip_visibility Bridget
+attack Padma Gary
+```
+<h5>output</h5>
+```
+This player is frozen
+The chosen wizard is Harry
+```
+<h5>input</h5>
+```
+5
+Harry
+Hermione
+Ron
+Draco
+Ginny
+5
+Munir
+0
+1000
+True
+Alaa
+1
+500
+True
+Mohamad
+2
+650
+True
+Alexandr
+3
+800
+True
+Mikhail
+4
+900
+True
+flip_visibility Alaa
+attack Mohamad Alexandr
+attack Munir Mikhail
+attack Alaa Munir
+attack Mikhail Munir
+super Mikhail Alaa
+attack Munir Alexandr
+attack Munir Alaa
+heal Munir Alaa
+```
+<h5>output</h5>
+```
+This player can't play
+This player is frozen
+This player is frozen
+This player is frozen
+The chosen wizard is Hermione
+```
+<h5>input</h5>
+```
+5
+Harry
+Hermione
+Ron
+Draco
+Ginny
+5
+Munir
+0
+1000
+True
+Alaa
+1
+1000
+True
+Mohamad
+2
+650
+True
+Alexandr
+3
+800
+True
+Mikhail
+4
+900
+True
+attack Mohamad Alexandr
+attack Munir Mikhail
+attack Munir Alexandr
+attack Munir Alaa
+```
+<h5>output</h5>
+```
+It's a tie
+```
+<h5>input</h5>
+```
+5
+harry
+Hermione
+Ron
+Draco
+Ginny
+5
+Munir
+0
+1000
+True
+Alaa
+1
+1000
+True
+Mohamad
+2
+650
+True
+Alexandr
+3
+800
+True
+Mikhail
+4
+900
+True
+attack Mohamad Alexandr
+attack Munir Mikhail
+attack Munir Alexandr
+attack Munir Alaa
+```
+<h5>output</h5>
+```
+Invalid inputs
+```
+<h5>input</h5>
+```
+2
+Harry
+Hermione
+5
+Munir
+0
+1000
+True
+Alaa
+1
+499
+True
+Mohamad
+1
+650
+True
+Alexandr
+1
+250
+True
+Mikhail
+1
+250
+True
+attack Munir Mohamad
+heal Munir Mohamad
+heal Alaa Mohamad
+super Alaa Mohamad
+super S_0 Alexandr
+super S_1 Mikhail
+attack Munir S_2
+```
+<h5>output</h5>
+```
+Both players should be from the same team
+It's a tie
+```
+<h5>input</h5>
+```
+3
+Harry
+Hermione
+Darko
+5
+Munir
+0
+1000
+True
+Alaa
+1
+499
+True
+Mohamad
+1
+650
+True
+Alexandr
+1
+250
+True
+Mikhail
+2
+0
+False
+attack Munir Mohamad
+heal Munir Mohamad
+heal Alaa Mohamad
+super Alaa Mohamad
+super S_0 Alexandr
+attack Munir S_1
+super Mikhail Munir
+```
+<h5>output</h5>
+```
+Both players should be from the same team
+This player can't play
+The chosen wizard is Harry
+```
