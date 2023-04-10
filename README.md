@@ -53,7 +53,7 @@ P.P.S.: You have to use structure(s) for this assignment
 <h3>Examples:</h3>
 
 <h5>input</h5>
-```
+<code>
 5
 Harry
 Hermione
@@ -86,7 +86,7 @@ attack Mohamad Alexandr
 attack Munir Mikhail
 attack Munir Alexandr
 attack Munir Alaa
-```
+</code>
 <h5>output</h5>
 ```
 The chosen wizard is Hermione
